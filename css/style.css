@@ -1,0 +1,753 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "Pretendard";
+    src: url("Pretendard-Regular.eot");
+    src: url("Pretendard-Regular.eot?#iefix") format("embedded-opentype"),
+      url("Pretendard-Regular.woff2") format("woff2"),
+      url("Pretendard-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Pretendard";
+    src: url("Pretendard-Medium.eot");
+    src: url("Pretendard-Medium.eot?#iefix") format("embedded-opentype"),
+      url("Pretendard-Medium.woff2") format("woff2"),
+      url("Pretendard-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Pretendard";
+    src: url("Pretendard-semiBold.eot");
+    src: url("Pretendard-semiBold.eot?#iefix") format("embedded-opentype"),
+      url("Pretendard-semiBold.woff2") format("woff2"),
+      url("Pretendard-semiBold.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Pretendard";
+    src: url("Pretendard-Light.eot");
+    src: url("Pretendard-Light.eot?#iefix") format("embedded-opentype"),
+      url("Pretendard-Light.woff2") format("woff2"),
+      url("Pretendard-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: "Pretendard";
+    max-width: 1920px;
+    width: calc(100% - 40px);
+    overflow-x: hidden;
+}
+h3 {
+    width: 1920px;
+    font-size: 40px;
+    padding: 0 185px;
+}
+
+.header {
+    width: 1920px;
+    height: 100px;
+    box-shadow: 0px 3px 3px -3px gray;
+    z-index: 1;
+}
+.header .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 185px;
+    align-items: center;
+}
+.header .inner h1 {
+    font-size: 40px;
+}
+.header.active {
+    height: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(7px);
+}
+.header .inner .nav .gnb {
+    display: flex;
+    gap: 30px;
+}
+.main_visual {
+    width: 1920px;
+    height: 965px;
+    position: relative;
+}
+.main_visual h2 {
+    margin-left: 185px;
+    font-size: 200px;
+    position: relative;
+    padding-top: 310px;
+}
+.main_visual h2::before {
+    content: 'web publisher';
+    font-size: 150px;
+    font-weight: 300;
+    color: #79D7BE;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    transform: translateY(50%);
+}
+.mouse_scroll {
+    position: absolute;
+    left: 0;
+    bottom: -10%;
+    transform: translate(50%, 120%);
+    position: relative;
+}
+.mouse_scroll img {
+    width: 26px;
+    height: 40px;
+}
+.mouse_scroll .scroll img {
+    width: 16px;
+    height: 17px;
+    margin: 5px;
+}
+.scroll {
+    animation: arrow 1s linear infinite;
+    position: absolute;
+    top: 740px;
+    left: 50%;
+    transform: translateX(17%);
+}
+@keyframes arrow {
+    0% {
+        margin-top: 0px;
+    }
+    100% {
+        margin-top: 10px;
+    }
+}
+
+.section-01 {
+    width: 1920px;
+    height: 1065px;
+    padding-top: 150px;
+}
+.section-01 .text {
+    width: 1345px;
+    font-size: 20px;
+    margin: 0 auto;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.section-01 .text .left ul {
+    display: flex;
+    gap: 80px;
+}
+.section-01 .text .left li:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+.section-01 .text .left strong {
+    margin-bottom: 30px;
+}
+.section-01 .text .left p {
+    margin-bottom: 30px;
+}
+.section-01 .text .left .btn {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+.section-01 .text .left .btn a {
+    width: 450px;
+    height: 70px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 70px;
+    border: 1px solid #333;
+    margin-bottom: 30px;
+}
+.section-01 .text .right h4 {
+    margin-bottom: 30px;
+}
+.section-01 .text .right ul li:nth-child(1) {
+    margin-left: 85px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 65px;
+}
+.section-01 .text .right ul li p {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    position: relative;
+}
+.section-01 .text .right ul li p::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 6px;
+    left: -50px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.section-01 .text .right ul li p:nth-child(1)::after {
+    content: '';
+    height: 103px;
+    position: absolute;
+    top: 21px;
+    left: -43px;
+    border-left: 1px solid #000;
+}
+.section-01 .text .right ul li p:nth-child(2)::after {
+    content: '';
+    height: 103px;
+    position: absolute;
+    top: 22px;
+    left: -43px;
+    border-left: 1px solid #000;
+}
+.section-01 .text .right ul li:last-child {
+    width: 470px;
+    display: flex;
+    justify-content: space-between;
+}
+.section-01 .text .right ul li img {
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.section-02 {
+    width: 1920px;
+    height: 4000px;
+    margin: 0 auto;
+}
+.section-02 .content01 {
+    width: 1600px;
+    height: 650px;
+    margin: 100px auto;
+    display: flex;
+}
+.section-02 .content01 .mockup {
+    width: 800px;
+    height: 650px;
+    position: relative;
+    padding: 0 100px;
+}
+.section-02 .content01 .mockup .mockup_pc {
+    background: url(../img/목업_pc.png) no-repeat;
+    width: 565px;
+    height: 469px;
+    margin-top: 90px;
+    margin-left: 0px;
+    position: relative;
+}
+.section-02 .content01 .mockup .mockup_pc span {
+    background: url(../img/동아제약_pc.png) no-repeat;
+    width: 520px;
+    height: 313px;
+    object-fit: cover;
+    position: absolute;
+    top: 25px;
+    left: 23px;
+}
+.section-02 .content01 .mockup .mockup_tablet {
+    background: url(../img/목업_tablet.png) no-repeat;
+    width: 200px;
+    height: 304px;
+    position: absolute;
+    bottom: 54px;
+    right: 70px;
+}
+.section-02 .content01 .mockup .mockup_tablet span {
+    background: url(../img/동아제약_tablet.png) no-repeat;
+    width: 185px;
+    height: 243px;
+    object-fit: cover;
+    position: absolute;
+    top: 29px;
+    left: 9px;
+} 
+.section-02 .content01 .mockup .mockup_mobile {
+    background: url(../img/목업_mobile.png) no-repeat;
+    width: 117px;
+    height: 240px;
+    position: absolute;
+    bottom: 45px;
+    right: 0;
+    transform: translateX(20%);
+}
+.section-02 .content01 .mockup .mockup_mobile span {
+    background: url(../img/동아제약_mobile.png) no-repeat;
+    width: 105px;
+    height: 204px;
+    object-fit: cover;
+    position: absolute;
+    top: 30px;
+    left: 6px;
+    border-radius: 0 0 12px 12px;
+}
+.section-02 .content01 .info_txt {
+    width: 800px;
+    height: 650px;
+    padding: 100px 132px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+.section-02 .content01 .info_txt h5 {
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+.section-02 .content01 .info_txt ul {
+    display: flex;
+}
+.section-02 .content01 .info_txt ul strong {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.section-02 .content01 .info_txt ul p {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+.section-02 .content01 .info_txt .btn {
+    height: 60px;
+    margin-top: 60px;
+    display: flex;
+    gap: 30px;
+}
+.section-02 .content01 .info_txt .btn a:nth-child(1) {
+    width: 154px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+.section-02 .content01 .info_txt .btn a:nth-child(2) {
+    width: 137px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+.section-02 .content01 .info_txt .btn a:nth-child(3) {
+    width: 154px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+.section-02 .content02 {
+    width: 1600px;
+    height: 650px;
+    margin: 300px auto;
+    display: flex;
+}
+.section-02 .content02 .mockup {
+    width: 800px;
+    height: 650px;
+    position: relative;
+    padding: 0 100px;
+}
+.section-02 .content02 .mockup .mockup_pc {
+    background: url(../img/목업_pc.png) no-repeat;
+    width: 565px;
+    height: 469px;
+    margin-top: 90px;
+    margin-left: 0px;
+    position: relative;
+}
+.section-02 .content02 .mockup .mockup_pc span {
+    background: url(../img/목우촌몰_pc.png) no-repeat;
+    width: 520px;
+    height: 315px;
+    object-fit: cover;
+    position: absolute;
+    top: 24px;
+    left: 23px;
+}
+.section-02 .content02 .mockup .mockup_tablet {
+    background: url(../img/목업_tablet.png) no-repeat;
+    width: 200px;
+    height: 304px;
+    position: absolute;
+    bottom: 54px;
+    right: 70px;
+}
+.section-02 .content02 .mockup .mockup_tablet span {
+    background: url(../img/목우촌몰_tablet.png) no-repeat;
+    width: 185px;
+    height: 243px;
+    object-fit: cover;
+    position: absolute;
+    top: 29px;
+    left: 9px;
+} 
+.section-02 .content02 .mockup .mockup_mobile {
+    background: url(../img/목업_mobile.png) no-repeat;
+    width: 117px;
+    height: 240px;
+    position: absolute;
+    bottom: 45px;
+    right: 0;
+    transform: translateX(20%);
+}
+.section-02 .content02 .mockup .mockup_mobile span {
+    background: url(../img/목우촌몰_mobile.png) no-repeat;
+    width: 105px;
+    height: 204px;
+    object-fit: cover;
+    position: absolute;
+    top: 30px;
+    left: 6px;
+    border-radius: 0 0 12px 12px;
+}
+.section-02 .content02 .info_txt {
+    width: 800px;
+    height: 650px;
+    padding: 100px 132px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+.section-02 .content02 .info_txt h5 {
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+.section-02 .content02 .info_txt ul {
+    display: flex;
+}
+.section-02 .content02 .info_txt ul strong {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.section-02 .content02 .info_txt ul p {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+.section-02 .content02 .info_txt .btn {
+    height: 60px;
+    margin-top: 60px;
+    display: flex;
+    gap: 30px;
+}
+.section-02 .content02 .info_txt .btn a:nth-child(1) {
+    width: 154px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+.section-02 .content02 .info_txt .btn a:nth-child(2) {
+    width: 137px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+.section-02 .content02 .info_txt .btn a:nth-child(3) {
+    width: 154px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+.section-02 .content03 {
+    width: 1600px;
+    height: 650px;
+    margin: 300px auto;
+    display: flex;
+}
+.section-02 .content03 .mockup {
+    width: 800px;
+    height: 650px;
+    position: relative;
+    padding: 0 100px;
+}
+.section-02 .content03 .mockup .mockup_pc {
+    background: url(../img/일반형_목업_pc.png) no-repeat;
+    width: 675px;
+    height: 561px;
+    margin-top: 45px;
+    margin-left: 0px;
+    position: relative;
+}
+.section-02 .content03 .mockup .mockup_pc span {
+    background: url(../img/굽네치킨_pc.png) no-repeat;
+    width: 620px;
+    height: 375px;
+    object-fit: cover;
+    position: absolute;
+    top: 30px;
+    left: 28px;
+}
+.section-02 .content03 .info_txt {
+    width: 800px;
+    height: 650px;
+    padding: 100px 132px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+.section-02 .content03 .info_txt h5 {
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+.section-02 .content03 .info_txt ul {
+    display: flex;
+}
+.section-02 .content03 .info_txt ul strong {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.section-02 .content03 .info_txt ul p {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+.section-02 .content03 .info_txt .btn {
+    height: 60px;
+    margin-top: 60px;
+    display: flex;
+    gap: 30px;
+}
+.section-02 .content03 .info_txt .btn a:nth-child(1) {
+    width: 154px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+.section-02 .content03 .info_txt .btn a:nth-child(2) {
+    width: 137px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+.section-02 .content03 .info_txt .btn a:nth-child(3) {
+    width: 154px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+.section-02 .content04 {
+    width: 1600px;
+    height: 650px;
+    margin: 300px auto;
+    display: flex;
+}
+.section-02 .content04 .mockup {
+    width: 800px;
+    height: 650px;
+    position: relative;
+    padding: 0 100px;
+}
+.section-02 .content04 .mockup .mockup_pc {
+    background: url(../img/일반형_목업_pc.png) no-repeat;
+    width: 675px;
+    height: 561px;
+    margin-top: 45px;
+    margin-left: 0px;
+    position: relative;
+}
+.section-02 .content04 .mockup .mockup_pc span {
+    background: url(../img/파리크라상_pc.png) no-repeat;
+    width: 620px;
+    height: 375px;
+    object-fit: cover;
+    position: absolute;
+    top: 30px;
+    left: 28px;
+}
+.section-02 .content04 .info_txt {
+    width: 800px;
+    height: 650px;
+    padding: 100px 132px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+.section-02 .content04 .info_txt h5 {
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+.section-02 .content04 .info_txt ul {
+    display: flex;
+}
+.section-02 .content04 .info_txt ul strong {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.section-02 .content04 .info_txt ul p {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+.section-02 .content04 .info_txt .btn {
+    height: 60px;
+    margin-top: 60px;
+    display: flex;
+    gap: 30px;
+}
+.section-02 .content04 .info_txt .btn a:nth-child(1) {
+    width: 154px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+.section-02 .content04 .info_txt .btn a:nth-child(2) {
+    width: 137px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+.section-02 .content04 .info_txt .btn a:nth-child(3) {
+    width: 154px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+.section-03 {
+    width: 1920px;
+    height: 1800px;
+}
+.section-03 .list {
+    width: 1232px;
+    height: 1232px;
+    margin: 100px auto;
+}
+.section-03 .list ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+.section-03 .list ul li {
+    width: 290px;
+    height: 290px;
+}
+.section-03 .list ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px gray;
+}
+.animated-title {
+    font-size: 60px;
+    width: 1920px;
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    line-height: 100px;
+}
+.animated-title .track {
+    position: absolute;
+    white-space: nowrap;
+    will-change:transform;
+    animation: slider 60s linear infinite;
+}
+@keyframes slider {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+.section-04 {
+    width: 1920px;
+    height: 500px;
+    margin-top: 150px;
+    background-color: #000;
+}
+.section-04 .btn {
+    width: 310px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding-top: 140px;
+}
+.section-04 .btn img {
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+.section-04 .text {
+   text-align: center;
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+   row-gap: 50px;
+}
+.section-04 .text p {
+    font-size: 20px;
+    margin-top: 90px;
+}
+.section-04 .text span {
+    font-size: 16px;
+}
